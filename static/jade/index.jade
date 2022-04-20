@@ -1,0 +1,125 @@
+:go:func(arg)
+doctype html
+html(lang="fr")
+    head
+        title TAHON Valentin
+        style
+            include ../style/main.css
+    body
+        .profileDisplay
+            img(src='img/moi.jpg')
+            h1 TAHON Valentin
+            .links
+                a.linkedin(href='https://www.linkedin.com/in/valentin-tahon-b8300112a/' target='_blank')
+                    img(src='img/linkedin.png' alt='linkedin')
+                a.github(href='https://github.com/Prouk' target='_blank')
+                    img(src='img/github.png' alt='github')
+                a.facebook(href='https://www.facebook.com/valoutahon' target='_blank')
+                    img(src='img/facebook.png' alt='facebook')
+                a.twitter(href='https://twitter.com/Prouk_' target='_blank')
+                    img(src='img/twitter.png' alt='twitter')
+        .biography
+            h3 C'est moi coucou !
+            p
+                | Jeune développeur de 24 ans ayant soif d'apprendre tous les langages de programmation du monde.
+                br
+                | Actuellement en train de m'essayer au rust via quelques projets, je ne pense pas tarder à en venir à bout. je vous tiens au courant de mon avancement !
+                br
+                | AH! J'avais oublié de préciser, mais j'aime beacoup la musique
+        h2.title Mes projets principaux
+        .projects
+            div
+                h3 Moujin Dusic
+                p.comments en cours de développement dans un autre langage, oui en go, comme ce site qui tourne en go + Jade
+                p
+                    | Site de partage de liens de téléchargement de musiques introuvable autrement (ou trop difficilement pour les européens).
+                    br
+                ul Fonctionnalités :
+                    li Liste des albums disponibles
+                    li Recherche d'album par artiste / nom de l'album
+                    li Création de compte
+                    li Ajout d'un album à la liste, avec uploading de l'image de l'ablum
+                ul Technos utilisées :
+                    li Node.JS (Express.js, Pug.JS / Jade)
+                    li MySQL
+                    li JQuery
+            div
+                h3 Moujin Bot
+                img.icon(src='img/moujin-bot.png' alt='moujin-bot')
+                p
+                    | Bot Discord, permettant la recherche d'album via des requètes à l'API du site précédent.
+                    br
+                    | Le bot permet aussi de jouer les flux audios tirés de youtubes, de faire des playliste etc.
+                    br
+                ul Fonctionnalités :
+                    li Liste des albums disponibles
+                    li Recherche d'album par artiste / nom de l'album
+                ul Technos utilisées :
+                    li Node.JS (Discord.js)
+                img.example(src='img/moujin-msg.png' alt='moujin-msg')
+            div
+                h3 SamPP
+                img.icon(src='img/act.png' alt='act')
+                p
+                    | Plugin sous forme de .dll de parsing de données pour le jeu Final Fantasy XIV se chargeant sur le logiciel ACT.
+                    | Le plugin alerte au moyen de sons l'utilisateur lorsque certaines conditions sont remplies.
+                    br
+                ul Fonctionnalités :
+                    li alerte sonore reglable selon les choix de l'utilisateur
+                ul Technos utilisées :
+                    li C# (.Net4, WPF)
+                img.example(src='img/sampp.png' alt='moujin-msg')
+            div
+                h3 Moujin Bot V2
+                img.icon(src='img/moujin-bot.png' alt='moujin-bot')
+                p.comments En cours de développement, donc moins de fonctionnalités que l'original
+                p
+                    | Refonte du bot original en Rust, pour des performances toujours plus drôles.
+                    br
+                ul Fonctionnalités :
+                    li Répond aux commande '/'
+                    li Rejoins un channel pour jouer de la musique
+                    li à venir
+                ul Technos utilisées :
+                    li Rust (Serenity, Songbird)
+        h2.title Mes expériences professionnelles
+            p.comments langages HTML / CSS / JS omis volontairement pour eviter les répétitions
+        .exp
+            div
+                h3 Kimoce De novembre 2019 à mai 2021 (CDI)
+                img.icon(src='img/kimoce.png' alt='kimoce')
+                p
+                    | Entreprise editant un ERP nommé Kimoce, permettant de gérer les budgets, le ticketing, les stocks d'objets, les livraisons, et d'autres aspect des entreprises.
+                    br
+                    | Correction de bugs et développement de nouvelles fonctionnalités (allant de la création d'écran pour le client lourd en JAVA ou encore l'application WEB, au cryptage de mot de passe avec un petit algorithme fait à la main reconnaissant les mots de passe cryptés automatiquement).
+                ul Environnement :
+                    li JAVA (Spring, hibernate, Serving de fichiers ExtJS)
+                    li Node.JS (aurelia, framework fait maison)
+                    li SQL (Mysql, PG, oracle)
+                    li Méthode Agile (sprint de 1 mois)
+            div
+                h3 Umanis De mai 2021 à janvier 2022
+                img.icon(src='img/umanis.png' alt='umanis')
+                p
+                    | Entreprise de consulting basée à Colmar.
+                    br
+                    | Correction de bugs pour une application permettant de gérer la distribution de médicaments dans les hôpitaux psychiatrique.
+                ul Environnement :
+                    li JAVA (hibernate)
+                    li Node.JS (ExtJS)
+                    li SQL (Mysql, PG)
+                    li Méthode Agile
+            div
+                h3 Youdemus De 2018 à 2019 (mutliples stages pendant ma formation)
+                img.icon(src='img/youdemus.png' alt='kimoce')
+                p
+                    | Entreprise de développement de sites webs.
+                    br
+                    | Création et maintenance de sites webs, créations d'outils visant à améliorer la productivité de l'entreprise (générateur de devis)
+                ul Environnement :
+                    li PHP (Wordpress, from scratch)
+                    li MySQL
+                    li Ruby (Rails)
+        footer.footer
+            p NoCopyright (c)
+            p Powered by mes doigts qui tappent pas très vite
