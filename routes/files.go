@@ -14,3 +14,7 @@ func Files(wr http.ResponseWriter, req *http.Request) {
 	wr.Header().Set("Content-Type", "application/octet-stream")
 	wr.Write(fileBytes)
 }
+
+func MainFiles(wr http.ResponseWriter, req *http.Request) {
+	http.ServeFile(wr, req, "static"+req.RequestURI)
+}

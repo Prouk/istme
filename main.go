@@ -1,7 +1,7 @@
 package main
 
 // generate exemple
-//go:generate jade -writer -fmt -pkg=static -d=static\generated .\static\jade\index.jade
+//jade -writer -fmt -pkg=static -d=static\generated .\static\jade\index.jade
 
 import (
 	"context"
@@ -16,13 +16,26 @@ type MyHandler struct{}
 
 func (handler MyHandler) ServeHTTP(wr http.ResponseWriter, req *http.Request) {
 	arg := strings.Split(req.RequestURI, "/")
-	switch arg[1] {
-	case "":
-		routes.Home(wr, req)
-	case "img":
-		routes.Files(wr, req)
-	default:
-		routes.Home(wr, req)
+	if req.Method == "GET" {
+		switch arg[1] {
+		case "":
+			routes.Home(wr, req)
+		case "style":
+			routes.MainFiles(wr, req)
+		case "script":
+			routes.MainFiles(wr, req)
+		case "img":
+			routes.Files(wr, req)
+		default:
+			routes.Home(wr, req)
+		}
+	} else {
+		switch arg[1] {
+		case "apiTest":
+			routes.SimpleApiTest(wr, req)
+		default:
+			routes.ErrorApiTest(wr, req)
+		}
 	}
 }
 

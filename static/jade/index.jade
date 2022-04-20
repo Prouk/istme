@@ -2,10 +2,25 @@
 doctype html
 html(lang="fr")
     head
+        meta(charset='utf-8')
+        meta(name='keywords', content='TAHON, VALENTIN, TAHON VALENTIN, Tahon, Valentin, Tahon Valentin, valentin, développeur, Go, Rust, Java')
+        meta(name='description', content='Bonjour, ceci est un petit site qui tourne sur un serveur en Go, sur un petit rapbery dans mon salon.')
+        meta(name='author', content='Tahon Valentin')
         title TAHON Valentin
-        style
-            include ../style/main.css
+        link(rel='stylesheet', href='style/main.css')
+        script(src='script/jquery.js')
+        script(src='script/main.js')
     body
+        button(type='button').modalButton APIs
+        .modal
+            .api
+                h3 Mes APIs
+                .apiContainer
+                    .fields
+                        input.material(type='text', name='test', placeholder='Input Test')
+                        button(type='button' id='buttonApi1') Go
+                    p.response.apiResp1 Response :
+                p.comments En cours d'ajout
         .profileDisplay
             img(src='img/moi.jpg')
             h1 TAHON Valentin
