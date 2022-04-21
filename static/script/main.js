@@ -5,6 +5,7 @@ $(document).ready(function (){
 
     $('.apiTest').on('click', 'button', function (){
         $('.apiTest button').addClass('rotating')
+        $('.apiTest button').prop("disabled",true);
         let data = {
             text: $('.apiTest input[name=test]').val()
         }
@@ -16,11 +17,13 @@ $(document).ready(function (){
             .done(function(resp) {
                 $('.apiTest .response').text(resp.Msg)
                 $('.apiTest button').removeClass('rotating')
+                $('.apiTest button').prop("disabled",false);
             });
     })
 
     $('.apiFfxiv').on('click', 'button', function (){
         $('.apiFfxiv button').addClass('rotating')
+        $('.apiFfxiv button').prop("disabled",true);
         let data = {
             name: $('.apiFfxiv input[name=name]').val().replace(' ', '+'),
             world: $('.apiFfxiv select[name=world]').val()
@@ -34,6 +37,7 @@ $(document).ready(function (){
             .done(function(resp) {
                 $('.apiFfxiv .response').html(ffxivCharConstructor(resp))
                 $('.apiFfxiv button').removeClass('rotating')
+                $('.apiFfxiv button').prop("disabled",false);
             });
     })
 })
