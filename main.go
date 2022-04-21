@@ -1,7 +1,7 @@
 package main
 
 // generate exemple
-//jade -writer -fmt -pkg=static -d=static\generated .\static\jade\index.jade
+//go:generate jade -writer -fmt -pkg=static -d=static\\generated .\\static\\jade\\index.jade
 
 import (
 	"context"
@@ -33,6 +33,8 @@ func (handler MyHandler) ServeHTTP(wr http.ResponseWriter, req *http.Request) {
 		switch arg[1] {
 		case "apiTest":
 			routes.SimpleApiTest(wr, req)
+		case "apiFfxiv":
+			routes.FfxivApi(wr, req)
 		default:
 			routes.ErrorApiTest(wr, req)
 		}

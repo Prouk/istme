@@ -4,7 +4,8 @@ html(lang="fr")
     head
         meta(charset='utf-8')
         meta(name='keywords', content='TAHON, VALENTIN, TAHON VALENTIN, Tahon, Valentin, Tahon Valentin, valentin, développeur, Go, Rust, Java')
-        meta(name='description', content='Bonjour, ceci est un petit site qui tourne sur un serveur en Go, sur un petit rapbery dans mon salon.')
+        meta(name='description', content='Bonjour, ceci est un petit site qui tourne sur un serveur en Go, sur un petit raspbery dans mon salon.')
+        meta(name='author', content='Tahon Valentin')
         meta(name='author', content='Tahon Valentin')
         title TAHON Valentin
         link(rel='stylesheet', href='style/main.css')
@@ -15,14 +16,34 @@ html(lang="fr")
         .modal
             .api
                 h3 Mes APIs
-                .apiContainer
+                .apiContainer.apiTest
+                    h4 API test (écrit du texte dans un fichier sur mon serveur)
                     .fields
                         input.material(type='text', name='test', placeholder='Input Test')
-                        button(type='button' id='buttonApi1') Go
-                    p.response.apiResp1 Response :
+                        button(type='button') Go
+                    p.response Response :
+                .apiContainer.apiFfxiv
+                    h4 Scrappeur d'info de personnage FFXIV
+                    .fields
+                        input.material(type='text', name='name', placeholder='Nom du personnage sur FFXIV')
+                        select.material(name='world', placeholder='Serveur du personnage sur FFXIV')
+                            option(value='Moogle' selected=true) Moogle
+                            option(value='Cerberus') Cerberus
+                            option(value='Louisoix') Louisoix
+                            option(value='Omega') Omega
+                            option(value='Ragnarok') Ragnarok
+                            option(value='Spriggan') Spriggan
+                            option(value='Lich') Lich
+                            option(value='Odin') Odin
+                            option(value='Phoenix') Phoenix
+                            option(value='Shiva') Shiva
+                            option(value='Twintania') Twintania
+                            option(value='Zodiark') Zodiark
+                        button(type='button') Go
+                    p.response.apiResp2 Response :
                 p.comments En cours d'ajout
         .profileDisplay
-            img(src='img/moi.jpg')
+            img(src='img/moi.jpg' alt='moi')
             h1 TAHON Valentin
             .links
                 a.linkedin(href='https://www.linkedin.com/in/valentin-tahon-b8300112a/' target='_blank')

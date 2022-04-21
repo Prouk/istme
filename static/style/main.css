@@ -12,12 +12,18 @@ a {
     text-decoration: none;
 }
 
-input.material {
+.rotating {
+    animation: rotation 2s infinite linear;
+}
+
+.material {
     border: none;
     border-radius: 7px;
     padding: 7px;
     background-color: rgba(127,127,127,0.25);
     color: #ffffff;
+    width: 30%;
+    margin: 5px;
 }
 
 button.modalButton {
@@ -182,5 +188,14 @@ p.response {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
     }
 }
