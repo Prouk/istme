@@ -129,6 +129,11 @@ p.response {
     font-size: 0.9em;
 }
 
+.comments a{
+    text-decoration: underline;
+    color: #ffffff;
+}
+
 .title {
     text-align: center;
     text-shadow: 3px 2px 4px #000000
