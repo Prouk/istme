@@ -32,14 +32,15 @@ button.modalButton {
     z-index: 99;
     top: 20px;
     right: 20px;
-    padding: 15px;
+    padding: 20px;
+    font-size: 1.25em;
     background-color: rgba(0, 0, 0, 0.45);
     box-shadow: 5px 5px 10px -5px #000000;
     color: #ffffff;
     border: none;
     border-radius: 7px;
     font-weight: bold;
-    transition: 0.25s;
+    transition: 0.05s;
 }
 
 button.modalButton:active {
