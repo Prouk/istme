@@ -15,9 +15,10 @@ var ctx = context.Background()
 type MyHandler struct{}
 
 func (handler MyHandler) ServeHTTP(wr http.ResponseWriter, req *http.Request) {
-	arg := strings.Split(req.RequestURI, "/")
+	url := strings.Split(req.RequestURI, "/")
+	arg := strings.Split(url[1], "?")
 	if req.Method == "GET" {
-		switch arg[1] {
+		switch arg[0] {
 		case "":
 			routes.Home(wr, req)
 		case "style":
@@ -26,15 +27,15 @@ func (handler MyHandler) ServeHTTP(wr http.ResponseWriter, req *http.Request) {
 			routes.MainFiles(wr, req)
 		case "img":
 			routes.Files(wr, req)
+		case "apiFfxiv":
+			routes.FfxivApi(wr, req)
 		default:
 			routes.Home(wr, req)
 		}
 	} else {
-		switch arg[1] {
+		switch arg[0] {
 		case "apiTest":
 			routes.SimpleApiTest(wr, req)
-		case "apiFfxiv":
-			routes.FfxivApi(wr, req)
 		default:
 			routes.ErrorApiTest(wr, req)
 		}

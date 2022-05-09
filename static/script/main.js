@@ -30,7 +30,7 @@ $(document).ready(function (){
         }
         $('.apiFfxiv .response').text("request : \n"+JSON.stringify(data, undefined, 2))
         $.ajax({
-            method: 'POST',
+            method: 'GET',
             url: 'apiFfxiv',
             data: data
         })
