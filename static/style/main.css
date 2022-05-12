@@ -161,6 +161,10 @@ p.response {
     text-shadow: 3px 2px 4px #000000
 }
 
+.project h3, .exp h3 {
+    width: 45%;
+}
+
 .projects > div, .exp > div {
     position: relative;
     line-height: 1.25em;
