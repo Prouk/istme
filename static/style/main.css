@@ -1,6 +1,6 @@
 body {
     margin: 0px;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #f10ad5, #f76aa1, #5c9d8e, #acefdf);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100%;
@@ -10,6 +10,16 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .rotating {
@@ -59,6 +69,19 @@ button.modalButton:active {
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 10px;
     width: 80%;
+    max-height: 93vh;
+    overflow: auto;
+}
+
+.modal .close {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 1em;
+    border-radius: 7px;
+    background-color: rgba(245, 89, 67, 0.7);
+    cursor: pointer;
+
 }
 
 .apiContainer {
@@ -67,13 +90,12 @@ button.modalButton:active {
 }
 
 .apiContainer button {
-    position: absolute;
     right: 20px;
-    padding: 7px;
-    border-radius: 50%;
+    padding: 13px;
+    border-radius: 15px;
     border: none;
     cursor: pointer;
-    background: rgba(127,127,127,0.25);
+    background: rgba(127,127,127,0.5);
     color: #ffffff;
 }
 
@@ -178,6 +200,10 @@ p.response {
 }
 
 @media screen and (max-width: 1295px) {
+    body{
+        font-size: 1.75em;
+    }
+
     .projects > div, .exp > div {
         width: 90%;
     }

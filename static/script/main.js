@@ -3,6 +3,10 @@ $(document).ready(function (){
         $('.modal').fadeToggle(250)
     })
 
+    $('.modal .close').on('click', function (){
+        $('.modal').slideUp(250)
+    })
+
     $('.apiTest').on('click', 'button', function (){
         $('.apiTest button').addClass('rotating')
         $('.apiTest button').prop("disabled",true);
