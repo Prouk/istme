@@ -3,15 +3,16 @@ doctype html
 html(lang="fr")
     head
         meta(charset='utf-8')
-        meta(name='keywords', content='TAHON, VALENTIN, TAHON VALENTIN, Tahon, Valentin, Tahon Valentin, valentin, développeur, Go, Rust, Java')
-        meta(name='description', content='Bonjour, ceci est un petit site qui tourne sur un serveur en Go, sur mon petit raspbery dans mon salon.')
+        meta(name='keywords', content='TAHON, VALENTIN, TAHON VALENTIN, Tahon, Valentin, Tahon Valentin, valentin, développeur, Go, Rust, Java, NodeJS, JS')
+        meta(name='description', content='Bonjour, ceci est un petit site qui tourne sur un serveur en Go, sur mon petit raspberry pi dans mon salon.')
         meta(name='author', content='Tahon Valentin')
-        meta(property='og:title', content='TAHON Valentin')
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(property='og:title', content='TAHON Valentin, Développeur')
         meta(property='og:image', content='img/moi.jpg')
         meta(property='og:type', content='website')
-        meta(property='og:description', content='Bonjour, ceci est un petit site qui tourne sur un serveur en Go, sur mon petit raspbery dans mon salon.')
-        meta(property='og:site_name', content='TAHON Valentin')
-        title TAHON Valentin
+        meta(property='og:description', content='Bonjour, ceci est un petit site qui tourne sur un serveur en Go, sur mon petit raspberry pi dans mon salon.')
+        meta(property='og:site_name', content='TAHON Valentin, Développeur')
+        title TAHON Valentin, Développeur
         link(rel='stylesheet', href='style/main.css')
         script(src='script/jquery.js')
         script(src='script/main.js')
@@ -31,7 +32,7 @@ html(lang="fr")
                     h4 Scrappeur d'info de personnage FFXIV
                     .fields
                         input.material(type='text', name='name', placeholder='Nom du personnage sur FFXIV')
-                        select.material(name='world', placeholder='Serveur du personnage sur FFXIV')
+                        select.material(name='world', placeholder='Serveur du personnage sur FFXIV (ils sont pas tous là, je sais)')
                             option(value='Moogle' selected=true) Moogle
                             option(value='Cerberus') Cerberus
                             option(value='Louisoix') Louisoix

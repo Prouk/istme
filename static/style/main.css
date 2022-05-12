@@ -179,7 +179,8 @@ p.response {
 .projects > div > img.icon, .exp > div > img.icon {
     border-radius: 10px;
     position: absolute;
-    height: 5em;
+    max-height: 5em;
+    max-width: 55%;
     top: 5px;
     right: 5px;
 }
